@@ -5,7 +5,7 @@ namespace model;
 /**
  * Description of user
  */
-class user {
+class User {
     /**
      *
      * @var int 
