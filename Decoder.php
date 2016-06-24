@@ -19,7 +19,7 @@ class Decoder {
      *
      * @var type int
      */
-    private $canal = 1;
+    private $chanel = 1;
     
     /**
      * 
@@ -33,8 +33,8 @@ class Decoder {
      * 
      * @return int
      */
-    public function getCanal() {
-        return $this->canal;
+    public function getChanel() {
+        return $this->chanel;
     }
 
     /**
@@ -62,8 +62,8 @@ class Decoder {
      * @param int $canalNumber
      * @return \Decoder
      */
-    public function selectCanal($canalNumber) {
-        $this->canal = $canalNumber;
+    public function selectChanel($chanelNumber) {
+        $this->chanel = $chanelNumber;
         
         return $this;
     }
