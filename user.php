@@ -5,7 +5,7 @@ namespace model;
 /**
  * Description of user
  */
-class user {
+class User {
     /**
      *
      * @var int 
@@ -24,6 +24,12 @@ class user {
      */
     private $birthDate;
     
+    /**
+     * 
+     * @param int $id
+     * @param string $name
+     * @param \DateTime $birthDate
+     */
     public function __construct($id, $name, $birthDate) {
         $this->id = $id;
         $this->name = $name;
@@ -52,6 +58,10 @@ class user {
      */
     public function getBirthDate() {
         return $this->birthDate;
+    }
+    
+    public function toString() {
+        return $this->name .' '. $this->birthDate->format('Y-m-d');
     }
     
 }
