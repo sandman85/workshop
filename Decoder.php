@@ -7,7 +7,7 @@ namespace TV;
  *
  * @author sandman
  */
-class Decoder {
+class Decoder implements DecoderInterface {
     
     /**
      *

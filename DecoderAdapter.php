@@ -17,7 +17,7 @@ class DecoderAdapter {
      * 
      * @param \TV\Decoder $decoder
      */
-    public function __construct(Decoder $decoder) {
+    public function __construct(DecoderInterface $decoder) {
         $this->decoder = $decoder;
     }
     
