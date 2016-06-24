@@ -33,7 +33,7 @@ class RemoteController {
      * @param \TV\Decoder $decoder
      */
     public function __construct() {
-        $this->decoderAdapter = new DecoderAdapter(new Decoder());
+        $this->decoderAdapter = new DecoderAdapter(new DecoderProxy());
         $this->telly = new Telly($this->decoderAdapter);
     }
     
