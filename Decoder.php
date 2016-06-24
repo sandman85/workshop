@@ -41,7 +41,7 @@ class Decoder {
      * 
      * @return \Decoder
      */
-    public function on() {
+    public function turnOn() {
         $this->runState = true;
         
         return $this;
@@ -51,7 +51,7 @@ class Decoder {
      * 
      * @return \Decoder
      */
-    public function off() {
+    public function turnOff() {
         $this->runState = false;
         
         return $this;
@@ -59,10 +59,10 @@ class Decoder {
     
     /**
      * 
-     * @param int $canalNumber
+     * @param int $chanelNumber
      * @return \Decoder
      */
-    public function selectChanel($chanelNumber) {
+    public function chooseChanel($chanelNumber) {
         $this->chanel = $chanelNumber;
         
         return $this;
