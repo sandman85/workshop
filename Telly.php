@@ -19,7 +19,7 @@ class Telly {
      *
      * @var type int
      */
-    private $canal = 1;
+    private $chanel = 1;
 
     /**
      *
@@ -47,7 +47,7 @@ class Telly {
      * 
      * @return int
      */
-    public function getCanal() {
+    public function getChanel() {
         return $this->canal;
     }
     
@@ -76,8 +76,8 @@ class Telly {
      * @param int $canalNumber
      * @return \Telly
      */
-    public function selectCanal($canalNumber) {
-        $this->canal = $canalNumber;
+    public function selectChanel($chanelNumber) {
+        $this->chanel = $chanelNumber;
         
         return $this;
     }
@@ -87,20 +87,20 @@ class Telly {
      * @return \Telly
      * @throws Exception
      */
-    public function translateCanalToDecoder() {
-        if (!$this->decoder->getRunState()) {
-            throw new Exception("Decoder is not on");
-        }
-        
+    public function translateChanelToDecoder() {        
         if (!is_null($this->decoder)) {
+            if (!$this->decoder->getRunState()) {
+                throw new Exception("Decoder is not on");
+            }
+            
             // Simple example
-            switch ($this->canal) {
+            switch ($this->chanel) {
                 case 1:
-                    $this->decoder->selectCanal(5);
+                    $this->decoder->selectChanel(5);
                 case 2:
-                    $this->decoder->selectCanal(3);
+                    $this->decoder->selectChanel(3);
                 case 3:
-                    $this->decoder->selectCanal(1);
+                    $this->decoder->selectChanel(1);
             }
         } else {
             throw new Exception("There is no decoder attached");

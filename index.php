@@ -5,5 +5,5 @@ $tellyOb = new TV\Telly($decoderOb);
 
 $decoderOb->on();
 $tellyOb->on()
-        ->selectCanal(1)
-        ->translateCanalToDecoder();
+        ->selectChanel(1)
+        ->translateChanelToDecoder();
