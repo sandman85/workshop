@@ -5,7 +5,7 @@ namespace TV;
 /**
  * Description of decoderAdapter
  */
-class decoderAdapter {
+class DecoderAdapter {
     
     /**
      *
