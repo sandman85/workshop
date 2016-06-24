@@ -6,24 +6,13 @@ namespace model;
  * Description of user
  */
 class User {
-    /**
-     *
-     * @var int 
-     */
-    private $id;
     
     /**
      *
-     * @var string 
+     * @var UserData
      */
-    private $name;
-    
-    /**
-     *
-     * @var \DateTime 
-     */
-    private $birthDate;
-    
+    private $userData;
+
     /**
      * 
      * @param int $id
@@ -31,37 +20,15 @@ class User {
      * @param \DateTime $birthDate
      */
     public function __construct($id, $name, $birthDate) {
-        $this->id = $id;
-        $this->name = $name;
-        $this->birthDate = $birthDate;
-    }
-    
-    /**
-     * 
-     * @return int
-     */
-    public function getId() {
-        return $this->id;
+        $this->userData = new UserData($id, $name, $birthDate);
     }
     
     /**
      * 
      * @return string
      */
-    public function getName() {
-        return $this->name;
-    }
-    
-    /**
-     * 
-     * @return \DateTime
-     */
-    public function getBirthDate() {
-        return $this->birthDate;
-    }
-    
     public function toString() {
-        return $this->name .' '. $this->birthDate->format('Y-m-d');
+        return $this->userData->getName() .' '. $this->userData->getBirthDate()->format('Y-m-d');
     }
     
 }
