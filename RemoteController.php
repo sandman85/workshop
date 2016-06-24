@@ -23,9 +23,9 @@ class RemoteController {
     
     /**
      *
-     * @var Decoder
+     * @var DecoderAdapter
      */
-    private $decoder;
+    private $decoderAdapter;
     
     /**
      * 
@@ -33,8 +33,8 @@ class RemoteController {
      * @param \TV\Decoder $decoder
      */
     public function __construct() {
-        $this->decoder = new Decoder();
-        $this->telly = new Telly($this->decoder);
+        $this->decoderAdapter = new DecoderAdapter(new Decoder());
+        $this->telly = new Telly($this->decoderAdapter);
     }
     
     /**
@@ -43,8 +43,8 @@ class RemoteController {
      * @return \TV\RemoteController
      */
     public function chooseChanel($chanelNumber) {
-        $this->decoderOb->on();
-        $this->tellyOb->on()
+        $this->decoderAdapter->on();
+        $this->telly->on()
                 ->selectChanel($chanelNumber)
                 ->translateChanelToDecoder();
         

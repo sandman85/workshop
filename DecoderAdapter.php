@@ -3,9 +3,9 @@
 namespace TV;
 
 /**
- * Description of decoderAdapter
+ * Description of DecoderAdapter
  */
-class decoderAdapter {
+class DecoderAdapter {
     
     /**
      *
@@ -50,6 +50,10 @@ class decoderAdapter {
         $this->decoder->chooseChanel($chanelNumber);
         
         return $this;
+    }
+    
+    public function getRunState() {
+        return $this->decoder->getRunState();
     }
     
 }
