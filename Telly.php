@@ -73,7 +73,7 @@ class Telly {
     
     /**
      * 
-     * @param int $canalNumber
+     * @param int $chanelNumber
      * @return \Telly
      */
     public function selectChanel($chanelNumber) {

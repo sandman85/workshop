@@ -1,9 +1,5 @@
 <?php
 
-$decoderOb = new TV\Decoder();
-$tellyOb = new TV\Telly($decoderOb);
+$remoteController = new TV\RemoteController();
 
-$decoderOb->on();
-$tellyOb->on()
-        ->selectChanel(1)
-        ->translateChanelToDecoder();
+$remoteController->chooseChanel(1);

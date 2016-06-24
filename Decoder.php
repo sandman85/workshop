@@ -59,7 +59,7 @@ class Decoder {
     
     /**
      * 
-     * @param int $canalNumber
+     * @param int $chanelNumber
      * @return \Decoder
      */
     public function selectChanel($chanelNumber) {

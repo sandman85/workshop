@@ -45,7 +45,7 @@ class RemoteController {
     public function chooseChanel($chanelNumber) {
         $this->decoderOb->on();
         $this->tellyOb->on()
-                ->selectChanel(1)
+                ->selectChanel($chanelNumber)
                 ->translateChanelToDecoder();
         
         return $this;
