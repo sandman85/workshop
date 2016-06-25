@@ -1,11 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace TV;
 
 /**
@@ -13,20 +7,8 @@ namespace TV;
  *
  * @author sandman
  */
-class RemoteController {
-    
-    /**
-     *
-     * @var Telly 
-     */
-    private $telly;
-    
-    /**
-     *
-     * @var DecoderAdapter
-     */
-    private $decoderAdapter;
-    
+class RemoteController extends RemoteControllerAbstract {
+
     /**
      * 
      * @param \TV\Telly $telly
@@ -36,7 +18,7 @@ class RemoteController {
         $this->decoderAdapter = new DecoderAdapter(new DecoderProxy());
         $this->telly = new Telly($this->decoderAdapter);
     }
-    
+
     /**
      * 
      * @param int $chanelNumber
@@ -47,8 +29,8 @@ class RemoteController {
         $this->telly->on()
                 ->selectChanel($chanelNumber)
                 ->translateChanelToDecoder();
-        
+
         return $this;
     }
-    
+
 }
