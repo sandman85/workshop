@@ -12,7 +12,7 @@ class DecoderProxy implements DecoderInterface {
     
     public function __construct() {
         $this->decoder = new Decoder();
-        $this->operator = new Operator();
+        $this->operator = new OperatorDecorator(new Operator());
     }
 
     public function getRunState() {
